@@ -1,7 +1,4 @@
-from abc import ABC, abstractmethod
-
-class Expression(ABC):
-    @abstractmethod
+class Expression:
     def eval(self) -> None:
         pass
 

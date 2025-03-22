@@ -23,5 +23,5 @@ class Token:
     def position(self) -> str:
         return f"[{self.row}:{self.col}]"
 
-    def __repr__(self) -> str:
+    def __str__(self) -> str:
         return f"{self.type.name} {self.position()} {self.text}"

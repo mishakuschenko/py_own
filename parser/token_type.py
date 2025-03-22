@@ -17,7 +17,7 @@ class TokenType(Enum):
     DO = "DO"
     BREAK = "BREAK"
     CONTINUE = "CONTINUE"
-    DEF = "DEF"
+    FUN = "FUN"
     RETURN = "RETURN"
     USE = "USE"
     MATCH = "MATCH"
