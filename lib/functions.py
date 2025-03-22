@@ -1,7 +1,7 @@
 from lib.values import NumberValue
 from values import Value
 from typing import List
-from parser.ast.statements import Statement
+from parser.ast.statements import Statement, ReturnStatement
 
 class Function:
     def execute(self, *args: List[Value]) -> Value:
@@ -17,7 +17,7 @@ class Functions:
 
     @staticmethod
     def get(key: str) -> Function:
-        if not Functions.is_exists(key): raise Exception(f"Unknown function: {key}")
+        if not Functions.is_exists(key): raise RuntimeError(f"Unknown function: {key}")
         return Functions.functions[key]
 
     @staticmethod

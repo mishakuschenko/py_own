@@ -21,7 +21,7 @@ class ArrayValue(Value):
         self.elements[index] = value
 
     def as_number(self) -> float:
-        raise Exception("Cannot cast array to number")
+        raise RuntimeError("Cannot cast array to number")
 
     def as_string(self) -> str:
         return str(self.elements)
@@ -64,4 +64,3 @@ class StringValue(Value):
 
     def __str__(self):
         return self.as_string()
-    
